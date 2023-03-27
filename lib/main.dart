@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:hive_sample/provider/provider.dart';
+import 'package:hive_sample/provider/student_provider.dart';
 import 'package:hive_sample/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 

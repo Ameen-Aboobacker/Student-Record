@@ -5,7 +5,7 @@ import 'package:hive_sample/widgets/snackbar.dart';
 import 'package:provider/provider.dart';
 
 import '../model/student_model.dart';
-import '../provider/provider.dart';
+import '../provider/student_provider.dart';
 import 'package:hive_sample/widgets/text_field.dart';
 
 class InputStudent extends StatelessWidget {

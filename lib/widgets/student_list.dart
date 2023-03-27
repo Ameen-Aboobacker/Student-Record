@@ -4,7 +4,7 @@ import 'package:hive_sample/widgets/delete_button.dart';
 import 'package:hive_sample/widgets/edit_button.dart';
 import 'package:provider/provider.dart';
 
-import '../provider/provider.dart';
+import '../provider/student_provider.dart';
 import '../screens/screen_details.dart';
 
 class StudentList extends StatelessWidget {

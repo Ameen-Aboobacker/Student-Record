@@ -4,7 +4,7 @@ import 'package:hive_sample/screens/screen_update.dart';
 import 'package:hive_sample/screens/search_screen.dart';
 import 'package:provider/provider.dart';
 
-import '../provider/provider.dart';
+import '../provider/student_provider.dart';
 import '../widgets/student_list.dart';
 
 class HomeScreen extends StatelessWidget {

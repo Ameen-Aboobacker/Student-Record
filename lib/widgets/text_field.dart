@@ -7,20 +7,24 @@ class TextFieldWidget extends StatelessWidget {
   final String validateText;
   final String validateContact;
   final String validateAlpha;
+    final String validateAge;
   final TextInputType keyType;
   final bool isContact;
   final bool isAlpha;
+   final bool isAge;
 
   const TextFieldWidget({
     super.key,
     required this.controller,
     required this.labelText,
     required this.validateText,
+    this.validateAge='only digits allowed',
      this.validateContact='Number Must be 10 digits',
      this.validateAlpha='only Alphabets Allowed',
     required this.keyType,
     this.isContact = false,
     this.isAlpha=false,
+    this.isAge=false,
   });
 
   @override
@@ -38,8 +42,10 @@ class TextFieldWidget extends StatelessWidget {
           }  else if(isContact && value.length != 10) {
             return validateContact;
           }
-           else if(isAlpha && value.length != 10) {
+           else if(isAlpha) {
             return validateAlpha;
+          }else if(isAge && value.length <= 2) {
+            return validateAge;
           }
           else {
             return null;

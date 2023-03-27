@@ -5,7 +5,7 @@ import 'package:hive_sample/screens/search_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/provider.dart';
-import '../widgets/student_list_widget.dart';
+import '../widgets/student_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

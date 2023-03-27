@@ -1,11 +1,12 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:hive_sample/widgets/snackbar.dart';
 import 'package:provider/provider.dart';
 
 import '../model/student_model.dart';
 import '../provider/provider.dart';
-import '../widgets/text_form_field.dart';
+import 'package:hive_sample/widgets/text_field.dart';
 
 class InputStudent extends StatelessWidget {
   InputStudent({
@@ -53,34 +54,34 @@ class InputStudent extends StatelessWidget {
         key: formValidateKey,
         child: ListView(
           children: [
-
             TextFieldWidget(
               controller: nameController,
-              labelText: "Name of student",
-              validateText: "Name is ",
+              labelText: "Name",
+              validateText: "Field Must be Fill",
               keyType: TextInputType.name,
+              isAlpha: true,
             ),
             TextFieldWidget(
               controller: ageController,
               labelText: 'Age',
-              validateText: "Age is ",
+              validateText: "Field Must be Fill",
               keyType: TextInputType.number,
+              isAge: true,
+              
             ),
             TextFieldWidget(
               controller: placeController,
               labelText: 'Place',
-              validateText: "Enter valid place",
+              validateText: "Field Must be Fill",
               keyType: TextInputType.emailAddress,
             ),
-            // -------------- TextField 4 -------------- //
             TextFieldWidget(
               controller: phoneController,
               labelText: "Phone Number",
-              validateText: 'Enter valid number',
+              validateText: "Field Must be Fill",
               keyType: TextInputType.number,
               isContact: true,
             ),
-            // -------------- Button -------------- //
             ElevatedButton(
               onPressed: () {
                 if (formValidateKey.currentState!.validate()) {
@@ -117,25 +118,25 @@ class InputStudent extends StatelessWidget {
     );
   }
 }
-void snackBar({required BuildContext context, required String message}) {
+/*void snackBar({required BuildContext context, required String message}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       duration: const Duration(seconds: 1),
-      width: MediaQuery.of(context).size.width * 0.6,
+      width:double.infinity,
       behavior: SnackBarBehavior.floating,
-      shape: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+    
       content: SizedBox(
-        height: 25,
+        height: 20,
         child: Center(
           child: Text(
             message,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 19,
+              fontSize: 15,
             ),
           ),
         ),
       ),
     ),
   );
-}
+}*/

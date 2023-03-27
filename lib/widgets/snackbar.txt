@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+class SnackBarWidget extends StatelessWidget {
+  const SnackBarWidget({super.key, required this.context,required t});
+  final String content;
+  final BuildContext context;
+
+
+  @override
+  Widget build(BuildContext context) {
+     ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      duration: const Duration(seconds: 5),
+      width: MediaQuery.of(context).size.width * 0.6,
+      behavior: SnackBarBehavior.floating,
+      shape: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+      content: SizedBox(
+        height: 25,
+        child: Center(
+          child: Text(
+            content,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 19,
+            ),
+          ),
+        ),
+      ),
+     )   );
+  }
+}

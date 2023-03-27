@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'data_model.dart';
+part of 'student_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
@@ -17,11 +17,11 @@ class StudentModelAdapter extends TypeAdapter<StudentModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return StudentModel(
+      id: fields[0] as int?,
       name: fields[1] as String,
       age: fields[2] as String,
       place: fields[3] as String,
       number: fields[4] as String,
-      id: fields[0] as int?,
     );
   }
 

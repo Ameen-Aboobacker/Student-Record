@@ -82,35 +82,38 @@ class InputStudent extends StatelessWidget {
               keyType: TextInputType.number,
               isContact: true,
             ),
-            ElevatedButton(
-              onPressed: () {
-                if (formValidateKey.currentState!.validate()) {
-                  final student = StudentModel(
-                    id:id,
-                    name: nameController.text,
-                    age: ageController.text,
-                    place: placeController.text,
-                    number: phoneController.text,
-                  );
-                  if(action=='Update'){
-                    Provider.of<StudentProvider>(context, listen: false)
-                      .updateStudent(student.id!, student);
-                                        Navigator.pop(context);
-                 snackBar(
-                      context: context, message: message);
+            Center(
+              child: ElevatedButton(
+                 style:ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20),padding:const EdgeInsets.fromLTRB(40,0,40,0),),
+                onPressed: () {
+                  if (formValidateKey.currentState!.validate()) {
+                    final student = StudentModel(
+                      id:id,
+                      name: nameController.text,
+                      age: ageController.text,
+                      place: placeController.text,
+                      number: phoneController.text,
+                    );
+                    if(action=='Update'){
+                      Provider.of<StudentProvider>(context, listen: false)
+                        .updateStudent(student.id!, student);
+                                          Navigator.pop(context);
+                   snackBar(
+                        context: context, message: message);
+                    }
+                    
+                    if(action=='Add'){
+                      Provider.of<StudentProvider>(context, listen: false)
+                        .addStudent(student);
+                                          Navigator.pop(context);
+                    snackBar(
+                        context: context, message: message);
+                    }
+            
                   }
-                  
-                  if(action=='Add'){
-                    Provider.of<StudentProvider>(context, listen: false)
-                      .addStudent(student);
-                                        Navigator.pop(context);
-                  snackBar(
-                      context: context, message: message);
-                  }
-
-                }
-              },
-              child: Text(action),
+                },
+                child: Text(action),
+              ),
             ),
           ],
         ),

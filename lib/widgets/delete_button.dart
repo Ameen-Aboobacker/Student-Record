@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:hive_sample/widgets/snackbar.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/provider.dart';
-import '../screens/screen_update.dart';
 
 class DeleteButton extends StatelessWidget {
   const DeleteButton({
@@ -40,7 +38,10 @@ class DeleteButton extends StatelessWidget {
           ),
         );
       },
-      icon: const Icon(Icons.delete,color: Colors.red,),
+      icon: const Icon(
+        Icons.delete,
+        color: Colors.red,
+      ),
     );
   }
 }

@@ -2,7 +2,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:hive_sample/model/student_model.dart';
+import 'package:student_record/model/student_model.dart';
 
 import '../widgets/edit_button.dart';
 

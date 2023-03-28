@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hive_sample/model/student_model.dart';
-import 'package:hive_sample/widgets/snackbar.dart';
+import 'package:student_record/model/student_model.dart';
+import 'package:student_record/widgets/snackbar.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/student_provider.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hive_sample/widgets/add_upadate_button.dart';
+import 'package:student_record/widgets/add_upadate_button.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/student_provider.dart';
-import 'package:hive_sample/widgets/text_field.dart';
+import 'package:student_record/widgets/text_field.dart';
 
 class InputStudent extends StatelessWidget {
   InputStudent({

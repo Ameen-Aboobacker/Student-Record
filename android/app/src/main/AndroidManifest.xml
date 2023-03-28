@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hive_sample">
+    package="com.example.Student_Record">
    <application
-        android:label="hive_sample"
+        android:label="Student Record"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

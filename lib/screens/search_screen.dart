@@ -2,7 +2,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:hive_sample/screens/screen_details.dart';
+import 'package:student_record/screens/screen_details.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/student_provider.dart';

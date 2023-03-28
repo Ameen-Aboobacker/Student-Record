@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:hive_sample/provider/student_provider.dart';
-import 'package:hive_sample/screens/home_screen.dart';
+import 'package:student_record/provider/student_provider.dart';
+import 'package:student_record/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'model/student_model.dart';

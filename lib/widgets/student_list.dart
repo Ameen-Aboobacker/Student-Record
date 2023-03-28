@@ -2,8 +2,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:hive_sample/widgets/delete_button.dart';
-import 'package:hive_sample/widgets/edit_button.dart';
+import 'package:student_record/widgets/delete_button.dart';
+import 'package:student_record/widgets/edit_button.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/student_provider.dart';

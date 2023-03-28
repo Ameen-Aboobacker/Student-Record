@@ -1,4 +1,4 @@
-package com.example.hive_sample
+package com.example.Student_Record
 
 import io.flutter.embedding.android.FlutterActivity
 

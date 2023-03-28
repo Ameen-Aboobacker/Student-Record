@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hive_sample/model/student_model.dart';
 
@@ -29,12 +31,9 @@ class StudentDetails extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            const CircleAvatar(
+             CircleAvatar(
               radius: 70,
-              child: Icon(
-                Icons.person,
-                size: 120,
-              ),
+              backgroundImage:FileImage(File(data.image)), 
             ),
             Expanded(
               child: ListView.separated(

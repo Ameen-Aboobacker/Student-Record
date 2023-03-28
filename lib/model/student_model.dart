@@ -13,11 +13,14 @@ class StudentModel extends HiveObject {
    String place;
   @HiveField(4)
    String number;
+  @HiveField(5)
+   String image;
   StudentModel({
      this.id,
     required this.name,
     required this.age,
     required this.place,
     required this.number,
+    required this.image,
   });
 }

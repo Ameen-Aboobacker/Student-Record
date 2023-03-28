@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hive_sample/widgets/delete_button.dart';
 import 'package:hive_sample/widgets/edit_button.dart';
@@ -26,13 +28,9 @@ class StudentList extends StatelessWidget {
                 ),
               );
             }),
-            leading: const CircleAvatar(
+            leading:   CircleAvatar(
               radius: 30,
-              child: Icon(
-                Icons.person,
-                size: 30,
-                color: Colors.white,
-              ),
+             backgroundImage: FileImage(File(studentinfo.image)),
             ),
             title: Text(studentinfo.name),
             trailing: Row(

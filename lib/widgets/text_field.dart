@@ -42,9 +42,7 @@ class TextFieldWidget extends StatelessWidget {
           }  else if(isContact && value.length != 10) {
             return validateContact;
           }
-           else if(isAlpha) {
-            return validateAlpha;
-          }else if(isAge && value.length <= 2) {
+          else if(isAge && value.length > 2) {
             return validateAge;
           }
           else {

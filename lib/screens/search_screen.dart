@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hive_sample/screens/screen_details.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +39,7 @@ class SearchScreen extends SearchDelegate {
             final studentInfo = StudentProvider.studentData[index];
             if (studentInfo.name.toLowerCase().contains(
                   query.toLowerCase(),
-                )) {
+                )||studentInfo.place.toLowerCase().contains(query.toLowerCase())) {
               return Column(
                 children: [
                   ListTile(
@@ -52,8 +54,8 @@ class SearchScreen extends SearchDelegate {
                       );
                     },
                     title: Text(studentInfo.name),
-                    leading: const CircleAvatar(
-                      child: Icon(Icons.person),
+                    leading: CircleAvatar(
+                      backgroundImage: FileImage(File(studentInfo.image)),
                     ),
                   ),
                   const Divider()
@@ -90,8 +92,8 @@ class SearchScreen extends SearchDelegate {
                       );
                     },
                     title: Text(studentInfo.name),
-                    leading: const CircleAvatar(
-                      child: Icon(Icons.person),
+                    leading:  CircleAvatar(
+                      backgroundImage: FileImage(File(studentInfo.image)),
                     ),
                   ),
                   const Divider()

@@ -27,6 +27,7 @@ class EditButton extends StatelessWidget {
               age: data.age,
               place: data.place,
               phone: data.number,
+              image:data.image,
              
             ),
           ),
